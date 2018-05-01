@@ -7,6 +7,7 @@ Backup and restore your imap mailboxes.
 ```bash
 clone https://github.com/arkadiusjonczek/imapdump.git
 cd imapdump
+composer install
 chmod u+x imap
 ./imap
 ```
