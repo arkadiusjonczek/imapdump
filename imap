@@ -7,4 +7,5 @@ use Symfony\Component\Console\Application;
 
 $application = new Application();
 $application->add(new \ImapDump\Command\DumpCommand());
+$application->add(new \ImapDump\Command\ListCommand());
 $application->run();
