@@ -11,3 +11,11 @@ composer install
 chmod u+x imap
 ./imap
 ```
+
+## Usage
+
+List your Mailboxes:
+
+```bash
+php imap ls <host> <username>
+```
