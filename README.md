@@ -14,7 +14,13 @@ chmod u+x imap
 
 ## Usage
 
-List your Mailboxes:
+Info about your mailbox usage and limit quota:
+
+```bash
+php imap info <host> <username>
+```
+
+List all your mailboxes with number of messages:
 
 ```bash
 php imap ls <host> <username>
