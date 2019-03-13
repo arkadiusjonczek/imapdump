@@ -26,8 +26,14 @@ List all your mailboxes with number of messages:
 php imap ls <host> <username>
 ```
 
-Backup your mailboxes:
+Backup your mailboxes to your filesystem:
 
 ```bash
 php imap backup <host> <username> <filepath>
+```
+
+Restore your mailboxes from filesystem backup:
+
+```bash
+php imap restore <host> <username> <filepath>
 ```
