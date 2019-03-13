@@ -25,6 +25,10 @@ class BackupCommand extends AuthCommand
         $connection  = parent::execute($input, $output);
         $destination = $input->getArgument('destination');
 
+        if (!is_dir($destination)) {
+            mkdir($destination);
+        }
+
         $mailboxes = $connection->getMailboxes();
 
         foreach ($mailboxes as $mailbox) {

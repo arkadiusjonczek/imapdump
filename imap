@@ -9,4 +9,5 @@ $application = new Application();
 $application->add(new \ImapDump\Command\InfoCommand());
 $application->add(new \ImapDump\Command\ListCommand());
 $application->add(new \ImapDump\Command\BackupCommand());
+$application->add(new \ImapDump\Command\RestoreCommand());
 $application->run();
