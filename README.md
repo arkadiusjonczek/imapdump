@@ -37,3 +37,15 @@ Restore your mailboxes from filesystem backup:
 ```bash
 php imap restore <host> <username> <filepath>
 ```
+
+Add email passwords in a configuration file:
+
+```bash
+cp config.sample.ini config.ini
+```
+
+```bash
+[accounts]
+user@mail.com=password
+user2@mail.com=password
+```
