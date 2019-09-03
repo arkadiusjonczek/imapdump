@@ -44,8 +44,8 @@ abstract class AuthCommand extends Command
         if (file_exists($configfile)) {
             $config = parse_ini_file($configfile, true);
 
-            if ($password = $config['accounts'][$username]) {
-                return $password;
+            if (!empty($config['accounts'][$username])) {
+                return $config['accounts'][$username];
             }
         }
 
