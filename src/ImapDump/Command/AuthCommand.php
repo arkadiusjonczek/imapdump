@@ -23,7 +23,7 @@ abstract class AuthCommand extends Command
         $host     = $input->getArgument('host');
         $username = $input->getArgument('username');
 
-        if (!$password = $this->checkpass($username)) {
+        if (!$password = $this->getAccountPassword($username)) {
             $question = new Question('Password: ');
             $question->setHidden(true);
 
@@ -37,14 +37,14 @@ abstract class AuthCommand extends Command
         return $connection;
     }
 
-    protected function checkpass(string $username)
+    protected function getAccountPassword(string $username)
     {
-        $configfile = getcwd().'/config.ini';
+        $configfile = sprintf('%s/config.ini', IMAPDUMP_ROOT_DIR);
 
         if (file_exists($configfile)) {
             $config = parse_ini_file($configfile, true);
 
-            if (!empty($config['accounts'][$username])) {
+            if (array_key_exists($username, $config['accounts'])) {
                 return $config['accounts'][$username];
             }
         }

@@ -5,6 +5,8 @@ require 'vendor/autoload.php';
 
 use Symfony\Component\Console\Application;
 
+define('IMAPDUMP_ROOT_DIR', __DIR__);
+
 $application = new Application();
 $application->add(new \ImapDump\Command\InfoCommand());
 $application->add(new \ImapDump\Command\ListCommand());
