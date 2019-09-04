@@ -23,15 +23,32 @@ abstract class AuthCommand extends Command
         $host     = $input->getArgument('host');
         $username = $input->getArgument('username');
 
-        $question = new Question('Password: ');
-        $question->setHidden(true);
+        if (!$password = $this->getAccountPassword($username)) {
+            $question = new Question('Password: ');
+            $question->setHidden(true);
 
-        $questionHelper = new QuestionHelper();
-        $password = $questionHelper->ask($input, $output, $question);
+            $questionHelper = new QuestionHelper();
+            $password = $questionHelper->ask($input, $output, $question);
+        }
 
         $server = new Server($host);
         $connection = $server->authenticate($username, $password);
 
         return $connection;
+    }
+
+    protected function getAccountPassword(string $username)
+    {
+        $configfile = sprintf('%s/config.ini', IMAPDUMP_ROOT_DIR);
+
+        if (file_exists($configfile)) {
+            $config = parse_ini_file($configfile, true);
+
+            if (array_key_exists($username, $config['accounts'])) {
+                return $config['accounts'][$username];
+            }
+        }
+
+        return false;
     }
 }
