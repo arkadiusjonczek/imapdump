@@ -19,8 +19,7 @@ class InfoCommand extends AuthCommand
     {
         $connection = parent::execute($input, $output);
 
-        $imapStream = $connection->getResource()->getStream();
-        $imapQuota  = imap_get_quotaroot($imapStream, 'INBOX');
+        $imapQuota = $connection->getQuota();
 
         $imapUsageInMb = $imapQuota['usage'] / 1024;
         $imapLimitInMb = $imapQuota['limit'] / 1024;
