@@ -29,5 +29,7 @@ class InfoCommand extends AuthCommand
             number_format($imapUsageInMb, 2, '.', ''),
             number_format($imapLimitInMb, 2, '.', '')
         );
+
+        $connection->close();
     }
 }
