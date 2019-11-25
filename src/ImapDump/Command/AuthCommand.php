@@ -44,7 +44,7 @@ abstract class AuthCommand extends Command
         if (file_exists($configfile)) {
             $config = parse_ini_file($configfile, true);
 
-            if (array_key_exists($username, $config['accounts'])) {
+            if (isset($config['accounts']) && isset($config['accounts'][$username])) {
                 return $config['accounts'][$username];
             }
         }
