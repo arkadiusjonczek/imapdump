@@ -10,7 +10,7 @@
     ],
     "require": {
         "symfony/console": "^4.0",
-        "ddeboer/imap": "^1.5"
+        "ddeboer/imap": "^1.9"
     },
     "require-dev": {
         "phpunit/phpunit": "^7.1"
