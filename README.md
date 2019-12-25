@@ -8,8 +8,8 @@ Backup and restore your imap mailboxes.
 clone https://github.com/arkadiusjonczek/imapdump.git
 cd imapdump
 composer install
-chmod u+x imap
-./imap
+chmod u+x imapdump
+./imapdump
 ```
 
 ## Usage
@@ -17,25 +17,25 @@ chmod u+x imap
 Info about your mailbox usage and limit quota:
 
 ```bash
-php imap info <host> <username>
+./imapdump info <host> <username>
 ```
 
 List all your mailboxes with number of messages:
 
 ```bash
-php imap ls <host> <username>
+./imapdump ls <host> <username>
 ```
 
 Backup your mailboxes to your filesystem:
 
 ```bash
-php imap backup <host> <username> <filepath>
+./imapdump backup <host> <username> <filepath>
 ```
 
 Restore your mailboxes from filesystem backup:
 
 ```bash
-php imap restore <host> <username> <filepath>
+./imapdump restore <host> <username> <filepath>
 ```
 
 Add email passwords in a configuration file:
