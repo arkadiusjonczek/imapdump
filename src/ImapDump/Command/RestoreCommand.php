@@ -78,5 +78,7 @@ class RestoreCommand extends AuthCommand
                 }
             }
         }
+
+        $connection->close();
     }
 }

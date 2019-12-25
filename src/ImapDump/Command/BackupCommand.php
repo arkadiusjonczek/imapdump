@@ -64,6 +64,8 @@ class BackupCommand extends AuthCommand
                 file_put_contents($filepathFlags, $this->getMessageFlags($message));
             }
         }
+
+        $connection->close();
     }
 
     /**

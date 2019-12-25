@@ -31,5 +31,7 @@ class ListCommand extends AuthCommand
             // $mailbox is instance of \Ddeboer\Imap\Mailbox
             printf('Mailbox "%s" has %s messages' . "\r\n", $mailbox->getName(), $mailbox->count());
         }
+
+        $connection->close();
     }
 }
