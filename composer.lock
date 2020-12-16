@@ -8,31 +8,31 @@
     "packages": [
         {
             "name": "ddeboer/imap",
-            "version": "1.9.0",
+            "version": "1.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ddeboer/imap.git",
-                "reference": "a07527c3ff54f06860564d9c51250964c2aa6892"
+                "reference": "a089dfcb9d177f921eb5dadc8d4144a44dff22ee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ddeboer/imap/zipball/a07527c3ff54f06860564d9c51250964c2aa6892",
-                "reference": "a07527c3ff54f06860564d9c51250964c2aa6892",
+                "url": "https://api.github.com/repos/ddeboer/imap/zipball/a089dfcb9d177f921eb5dadc8d4144a44dff22ee",
+                "reference": "a089dfcb9d177f921eb5dadc8d4144a44dff22ee",
                 "shasum": ""
             },
             "require": {
                 "ext-iconv": "*",
                 "ext-imap": "*",
                 "ext-mbstring": "*",
-                "php": "^7.1"
+                "php": "^7.3 || ^8.0"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^2.14",
-                "phpstan/phpstan": "^0.11",
-                "phpstan/phpstan-phpunit": "^0.11",
-                "phpstan/phpstan-strict-rules": "^0.11.0",
-                "phpunit/phpunit": "^7.5",
-                "zendframework/zend-mail": "^2.10"
+                "friendsofphp/php-cs-fixer": "^2.16.7",
+                "laminas/laminas-mail": "^2.12.3",
+                "phpstan/phpstan": "^0.12.57",
+                "phpstan/phpstan-phpunit": "^0.12.16",
+                "phpstan/phpstan-strict-rules": "^0.12.5",
+                "phpunit/phpunit": "^9.4.3"
             },
             "type": "library",
             "autoload": {
@@ -64,7 +64,21 @@
                 "imap",
                 "mail"
             ],
-            "time": "2019-11-25T09:13:08+00:00"
+            "support": {
+                "issues": "https://github.com/ddeboer/imap/issues",
+                "source": "https://github.com/ddeboer/imap/tree/1.11.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/Slamdunk",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/ddeboer",
+                    "type": "github"
+                }
+            ],
+            "time": "2020-11-30T14:52:49+00:00"
         },
         {
             "name": "psr/container",
@@ -1842,5 +1856,6 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "2.0.0"
 }
