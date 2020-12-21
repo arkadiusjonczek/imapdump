@@ -9,7 +9,7 @@
         }
     ],
     "require": {
-        "symfony/console": "^4.0",
+        "symfony/console": "^5.2",
         "ddeboer/imap": "^1.9"
     },
     "require-dev": {
