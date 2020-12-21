@@ -13,7 +13,7 @@
         "ddeboer/imap": "^1.9"
     },
     "require-dev": {
-        "phpunit/phpunit": "^7.1"
+        "phpunit/phpunit": "^9.5"
     },
     "autoload": {
         "psr-4": {
